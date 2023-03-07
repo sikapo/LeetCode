@@ -1,4 +1,7 @@
 package problem1;
+
+import java.util.Scanner;
+
 class Solution {
     public boolean isPalindrome(int x) {
         if (x == 0) return true;
@@ -15,7 +18,10 @@ class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        System.out.println(solution.isPalindrome(5445));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number ");
+        int number = scanner.nextInt();
+        System.out.println(solution.isPalindrome(number));
     }
 }
 
