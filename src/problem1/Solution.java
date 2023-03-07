@@ -1,19 +1,21 @@
 package problem1;
+class Solution {
+    public boolean isPalindrome(int x) {
+        if (x == 0) return true;
+        if (x < 0) return false;
 
-public class Solution {
-        public boolean isPalindrome(int x) {
-            float xx = x;
-            int [] a = a;
-            if (xx <= 0) {
-                return false;
-            }
-            for (int i = 0; i < x.lenght; i++) {
-                if ((xx / 10) > 0) {
-                    a [i] = xx % 10;
-                    xx
-                }
-            }
-            for ()
+        int origin = x;
+        int reverce = 0;
+        while (x > 0) {
+            reverce = reverce * 10 + x % 10;
+            x /= 10;
         }
+        return origin == reverce;
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(solution.isPalindrome(5445));
     }
 }
+
